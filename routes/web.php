@@ -12,7 +12,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/jobs/{id}', function ($id) {
+Route::get('/listings/{id}', function ($id) {
     $listing = Listing::findOrFail($id);
     return view('jobList',
     
