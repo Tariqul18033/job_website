@@ -8,4 +8,6 @@ use App\Http\Controllers\ListingController;
 Route::get('/', [ListingController::class, 'index'])->name('home');
 
 
-Route::get('/listings/{id}',[ListingController::class, 'show'])->name('listing.show');
+Route::get('/listings/{id}', [ListingController::class, 'show'])->name('listing.show');
+
+

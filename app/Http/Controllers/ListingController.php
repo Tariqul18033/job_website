@@ -12,7 +12,7 @@ class ListingController extends Controller
      */
     public function index()
     {
-        return view('jobListings',
+        return view('Listing.jobListings',
         [
         "listings" => Listing::all()]
         );
@@ -37,9 +37,13 @@ class ListingController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Listing $listing)
+    public function show(Request $request)
     {
-        return view('jobList', ["listing" => $listing]);
+        $listing = Listing::find($request->id);
+        return view('Listing.jobList',
+        
+        
+        ["listing" => $listing]);
     }
 
     /**
