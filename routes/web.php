@@ -18,3 +18,7 @@ Route::post('/listings', [ListingController::class, 'store']);
 
 Route::get('/listings/{id}', [ListingController::class, 'show'])->name('listing.show');
 //create
+
+//Show Edit Form
+Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->name('listing.edit');
+Route::put('/listings/{listing}', [ListingController::class, 'update']);//->middleware('auth');
